@@ -1,0 +1,33 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "features": {
+    "networking": true
+  },
+  "phpExtensionBundles": [
+    "kitchen-sink"
+  ],
+  "landingPage": "/wp-admin/plugins.php",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org/plugins",
+        "slug": "wp-extra"
+      },
+      "options": {
+        "activate": false
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "WP EXtra Demo"
+      }
+    },
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    }
+  ]
+}
